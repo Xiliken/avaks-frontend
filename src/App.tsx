@@ -13,6 +13,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import SharePage from './pages/SharePage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Register from './pages/Register';
 
 // Error Boundary Component
 class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { hasError: boolean; error: string | null }> {
@@ -58,6 +59,7 @@ const App: React.FC = () => {
                 <div className="flex">
                     <Routes>
                         <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
                         <Route path="/share/:token" element={<SharePage />} />
                         <Route
                             path="/"

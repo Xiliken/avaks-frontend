@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Логин
     const login = async (email: string, password: string) => {
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch('https://127.0.0.1:5000/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),
@@ -67,7 +67,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Регистрация
     const register = async (email: string, password: string) => {
         try {
-            const response = await fetch('http://localhost:5000/api/register', {
+            const response = await fetch('https://127.0.0.1:5000/api/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password }),
@@ -93,7 +93,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/dashboard', {
+            const response = await fetch('https://127.0.0.1:5000/api/dashboard', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
